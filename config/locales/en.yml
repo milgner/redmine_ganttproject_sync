@@ -1,5 +1,8 @@
 # English strings go here for Rails i18n
 en:
-  synchronize: "Synchronize"
-de:
-  synchronize: "Synchronisieren"
+  import_file: "Import GanttProject file"
+  pending_issues: "Pending importable issues"
+  permission_synchronize_issues: "Synchronize Ganttproject tasks"
+  no_pending_issues: "No imported issues to synchronize"
+  file_to_upload: "File to upload"
+  import_success: "Successfully imported GanttProject file"
