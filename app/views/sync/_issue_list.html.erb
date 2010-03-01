@@ -1,0 +1,10 @@
+<ul>
+<% issues.each do |issue| %>
+	<li>
+	<%= "#{issue.id} - #{issue.name}" %>
+	<% if issue.children.size > 0 %>
+		<%= render :partial => 'issue_list', :locals => {:issues => issue.children } %>
+	<% end %>
+	</li>
+<% end %>
+</ul>

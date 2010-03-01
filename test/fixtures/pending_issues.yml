@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  name: MyString
+  start: 2010-03-01
+  duration: 1
+  complete: 1
+  priority: 1
+two:
+  id: 2
+  name: MyString
+  start: 2010-03-01
+  duration: 1
+  complete: 1
+  priority: 1

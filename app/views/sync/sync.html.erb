@@ -1,0 +1,18 @@
+<% html_title l(:pending_issues) %>
+<h2><%= l(:pending_issues) %></h2>
+
+<div>
+<% if @issues.empty? %>
+	<%= l(:no_pending_issues) %>
+<% else %>
+	<%= render :partial => 'issue_list', :locals => { :issues => @issues } %>
+<% end %>
+</div>
+<div>
+<% form_tag 'import', :method => :post, :multipart => true do -%>
+	<%= hidden_field_tag :project_id, @project.id %>
+	<label for="ganttprojectfile"><%= l(:file_to_upload ) %></label>
+	<%= file_field_tag "ganttprojectfile", :accept => 'application/xml' %>
+    <div><%= submit_tag l(:import_file) %></div>
+<% end -%>
+</div>
