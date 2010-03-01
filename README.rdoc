@@ -1,0 +1,3 @@
+= ganttproject_sync
+
+This is a plugin for Redmine (http://www.redmine.org) to synchronize an issue tracker with data from a GanttProject file
