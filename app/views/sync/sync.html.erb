@@ -1,16 +1,22 @@
 <% html_title l(:pending_issues) %>
 <h2><%= l(:pending_issues) %></h2>
 
-<div>
-<% if @issues.empty? %>
-	<%= l(:no_pending_issues) %>
-<% else %>
-	<%= render :partial => 'issue_list', :locals => { :issues => @issues } %>
-<% end %>
+<div style="padding-bottom: 20px;">
+<%= hidden_field_tag :project_id, @project.id %>
+<%= l(:select_tracker) %><%= select_tag 'tracker_id', options_from_collection_for_select(@project.trackers, 'id', 'name', @tracker.nil? ? nil : @tracker.id), 
+	:onchange => remote_function(:update => 'sync_form', :with => "'tracker_id='+this.options[this.selectedIndex].value+'&project_id=#{@project.id}'", 
+		:url => { :action => :sync }) %>
+		<div id="sync_form">
+		<%= render :partial => 'sync_form' %>
+		</div>
 </div>
+
 <div>
+	<h3><%= l(:import_file) %></h3>
 <% form_tag 'import', :method => :post, :multipart => true do -%>
 	<%= hidden_field_tag :project_id, @project.id %>
+	<div style="padding: 5px"><%= l(:select_tracker) %><%= select_tag 'tracker_id', options_from_collection_for_select(@project.trackers, 'id', 'name') %></div>
+	<div style="padding: 5px"><%= l(:delete_unsynced) %><%= check_box_tag 'delete_unsynced' %></div>
 	<label for="ganttprojectfile"><%= l(:file_to_upload ) %></label>
 	<%= file_field_tag "ganttprojectfile", :accept => 'application/xml' %>
     <div><%= submit_tag l(:import_file) %></div>
