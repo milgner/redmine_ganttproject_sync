@@ -8,7 +8,7 @@ en:
   import_success: "Successfully imported GanttProject file"
   do_synchronize_issues: "Synchronize tasks"
   delete_unchecked: "Delete unchecked tasks?"
+  delete_unmatched_issues: "Delete issues without associated task?"
   delete_unsynced: "Delete unsychronized tasks?"
   select_tracker: "Tracker to import data into:"
   sync_success: "Synchronization successful"
-  override_dates_only: "Only override date and time fields?"

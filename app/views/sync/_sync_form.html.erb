@@ -3,8 +3,9 @@
 <% else %>
 	<% form_tag 'apply', :method => :post do -%>
 	<%= hidden_field_tag :project_id, @project.id %>
+	<%= hidden_field_tag :tracker_id, @tracker.id %>
 	<%= render :partial => 'issue_list', :locals => { :issues => @issues } %>
-	<div style="padding: 5px"><%= l(:override_dates_only) %><%= check_box_tag 'override_dates_only' %></div>
+	<div style="padding: 5px"><%= l(:delete_unmatched_issues) %><%= check_box_tag 'delete_unmatched' %></div>
 	<div style="padding: 5px"><%= l(:delete_unchecked) %><%= check_box_tag 'delete_unchecked' %></div>
 	<div style="padding: 5px"><%= submit_tag l(:do_synchronize_issues) %></div>
 	<% end -%>
