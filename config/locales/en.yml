@@ -12,3 +12,5 @@ en:
   delete_unsynced: "Delete unsychronized tasks?"
   select_tracker: "Tracker to import data into:"
   sync_success: "Synchronization successful"
+  check_all: "Check all"
+  uncheck_all: "Uncheck all"

@@ -1,0 +1,16 @@
+# English strings go here for Rails i18n
+de:
+  import_file: "GanttProject Datei importieren"
+  pending_issues: "Ausstehende Synchronisierungen"
+  permission_synchronize_issues: "GanttProject Aufgaben synchronisieren"
+  no_pending_issues: "Keine ausstehenden Aufgaben"
+  file_to_upload: "Hochzuladende Dateien"
+  import_success: "GanttProject Datei erfolgreich importiert"
+  do_synchronize_issues: "Aufgaben synchronisieren"
+  delete_unchecked: "Nicht ausgew&auml;hlte Aufgaben l&ouml;schen?"
+  delete_unmatched_issues: "Tickets ohne dazugeh&ouml;rige Aufgaben l&ouml;schen?"
+  delete_unsynced: "Nicht synchronisierte Aufgaben l&ouml;schen?"
+  select_tracker: "Tracker zu importieren:"
+  sync_success: "Synchronisierung erfolgreich!"
+  check_all: "Alle ausw&auml;hlen"
+  uncheck_all: "Alle abw&auml;hlen"

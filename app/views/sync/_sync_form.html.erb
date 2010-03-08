@@ -1,7 +1,8 @@
 <% if @issues.empty? %>
 	<%= l(:no_pending_issues) %>
 <% else %>
-	<% form_tag 'apply', :method => :post do -%>
+	<a onclick='check_all()'><%= l(:check_all) %></a> <a onclick='uncheck_all()'><%= l(:uncheck_all) %></a>
+	<% form_tag 'apply', :method => :post, :id => 'sync_form' do -%>
 	<%= hidden_field_tag :project_id, @project.id %>
 	<%= hidden_field_tag :tracker_id, @tracker.id %>
 	<%= render :partial => 'issue_list', :locals => { :issues => @issues } %>

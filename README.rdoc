@@ -1,6 +1,8 @@
 = ganttproject_sync
 
 This is a plugin for Redmine (http://www.redmine.org) to synchronize an issue tracker with data from a GanttProject file.
+It currently supports importing and updating tasks in a tracker of your choice.
 
-The actual issue tracking and management is done in a public project at my personal Redmine installation at http://redmine.marcusilgner.com/projects/ganttprojectsync
+You can find the code at GitHub: http://github.com/milgner/redmine_ganttproject_sync/ 
+The actual issue tracking is at my personal Redmine installation: http://redmine.marcusilgner.com/projects/ganttprojectsync
 There you may also find a demo installation to see the plugin in action: https://redmine.marcusilgner.com/projects/gpsyncdemo (use gpsync/gpsync as login credentials)

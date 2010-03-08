@@ -1,4 +1,7 @@
 <% html_title l(:pending_issues) %>
+<% content_for :header_tags do %>
+    <%= javascript_include_tag 'gp_sync', :plugin => 'redmine_ganttproject_sync' %>
+<% end %>
 <h2><%= l(:pending_issues) %></h2>
 
 <div style="padding-bottom: 20px;">

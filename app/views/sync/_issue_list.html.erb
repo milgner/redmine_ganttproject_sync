@@ -2,9 +2,10 @@
 	<%= l(:no_pending_issues) %>
 <% else %>
 <ul>
-<% issues.each do |issue| %>
+<% issues.each do |issue| 
+	task_id = "task#{issue.id}" %>
 	<li>
-	<%= check_box_tag "task#{issue.id}" %><%= "#{issue.id} - #{issue.name}" %>
+	<%= check_box_tag task_id, '1', true, :onchange => "toggle_subtasks(this);" %><%= "#{issue.id} - #{issue.name}" %>
 	<% if issue.children.size > 0 %>
 		<%= render :partial => 'issue_list', :locals => {:issues => issue.children } %>
 	<% end %>
