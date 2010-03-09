@@ -10,7 +10,7 @@ de:
   delete_unchecked: "Nicht ausgew&auml;hlte Aufgaben l&ouml;schen?"
   delete_unmatched_issues: "Tickets ohne dazugeh&ouml;rige Aufgaben l&ouml;schen?"
   delete_unsynced: "Nicht synchronisierte Aufgaben l&ouml;schen?"
-  select_tracker: "Tracker zu importieren:"
+  select_tracker: "Importiere in Tracker:"
   sync_success: "Synchronisierung erfolgreich!"
   check_all: "Alle ausw&auml;hlen"
   uncheck_all: "Alle abw&auml;hlen"

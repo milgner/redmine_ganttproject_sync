@@ -47,6 +47,7 @@ class SyncController < ApplicationController
       issue.gptask_id = task.gp_id
       issue.start_date = task.start
       issue.due_date = task.start+task.duration.days
+      issue.done_ratio = task.complete
       issue.subject = task.name
       issue.author = User.current unless issue.author
       #issue.description = task.notes unless gpTask.notes.empty?
