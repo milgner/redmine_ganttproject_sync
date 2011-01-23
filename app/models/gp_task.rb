@@ -13,4 +13,8 @@ class GpTask < ActiveRecord::Base
                                                               'WHERE project_id=#{project_id} ' +
                                                               'AND tracker_id=#{tracker_id} ' +
                                                               'AND predecessor_id=#{gp_id}'
+
+  def to_s
+    "#{id} - #{name}"
+  end
 end
