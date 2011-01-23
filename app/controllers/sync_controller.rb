@@ -99,7 +99,7 @@ class SyncController < ApplicationController
 
     default_calendar = doc.root.find_first_recursive {|node| node.kind_of? REXML::Element and node.name == 'default-week'}
     unless default_calendar.nil?
-      @weekdays = default_calendar.attributes.collect{|attribute,value| value.to_i }
+      @weekdays = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'].collect { |x| default_calendar.attribute(x).value.to_i }
     else
       @weekdays = [1,0,0,0,0,0,1] # assume default
     end
@@ -138,10 +138,11 @@ class SyncController < ApplicationController
 
   def calculate_real_end_date(start_date, duration)
     current_wday = start_date.wday
-    end_date = start_date+1
-    (duration-1).times do
-      end_date += (@weekdays[current_wday] == 0 ? 1 : 2)
+    end_date = start_date
+    while duration > 1
+      end_date += 1
       current_wday = (current_wday + 1) % 7
+      duration -= 1 if (@weekdays[current_wday] == 0)
     end
     end_date
   end
